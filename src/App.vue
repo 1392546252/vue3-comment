@@ -13,12 +13,16 @@
         :class="{ active: userInfoStore.userInfo.id === 3 }" 
         @click="userInfoStore.setUserInfo({id: 3, username: 'wangwu'})"
         >王五</button>
+        <hr>
+        <CommentOne />
+
     </div>
 </template>
 
 <script setup>
     import useUserInfo from './store/user'
-
+    import CommentOne from './components/CommentOne.vue';
+    
 
     const userInfoStore = useUserInfo();
 
